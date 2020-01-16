@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+   integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+   crossorigin=""/>
+
+	   <!-- Make sure you put this AFTER Leaflet's CSS -->
+	 <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+	   integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+	   crossorigin=""></script>
+
+   <style type="text/css">
+		   	/* #mapid { height: 500px; } */
+		   	h3 {
+  			text-align: center;
+		}
+		   	body {
+		    padding: 0;
+		    margin: 0;
+		}
+		html, body, #mapid {
+		    height: 100%;
+		    width: 100vw;
+		}
+
+   </style>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+</head>
+<body>
+
+<div> <H3>PSAV NORTHEAST REGION DIRECTORY</H3> </div>
+
+<div id="mapid"></div>
+
+
+
+<script type="text/javascript">
+
+
+acHotelWorcester  = L.marker([ 42.261926, -71.798879] ).bindPopup( "<b> AC Hotel Worcester </b> <br>Director: Steve Legrow,<br> Location: 2179<br> Phone: 508-641-2211<br>Cell: 508-641-2211<br>Address: 125 Front Street,Worcester,MA,1608<br>RVP: Gmoser"),
+
+albanyMarriott  = L.marker([ 42.722242, -73.800121] ).bindPopup( "<b> Albany Marriott </b> <br>Director: Tony Buck,<br> Location: 2084<br> Phone: 518-437-6321<br>Cell: 518-391-0122<br>Address: 189 Wolf Road,Albany,NY,12205<br>RVP: Gmoser"),
+
+doubletreebyHiltonBurlington  = L.marker([44.472722, -73.186567 ] ).bindPopup( "<b> Doubletree by Hilton Burlington </b> <br>Director: Chris Knauer,<br> Location: 1398<br> Phone: 802-862-1329<br>Cell: 802-558-6760<br>Address: 870 Williston Road,Burlington,VT,05403<br>RVP: Gmoser"),
+
+doubletreeWestborough  = L.marker([ 42.289848, -71.572549] ).bindPopup( "<b> Doubletree Westborough </b> <br>Director: Mark Rhodes,<br> Location: 3546<br> Phone: 508-366-7744<br>Cell: 617-529-1973<br>Address: 5400 Computer Drive,Westborough,MA,01581<br>RVP: Gmoser"),
+
+fourPointsbySheratonWakefield  = L.marker([42.514149, -71.039675 ] ).bindPopup( "<b> Four Points by Sheraton Wakefield </b> <br>Director: Josh Halpern,<br> Location: 3553<br> Phone: 781-245-9300<br>Cell: 781-985-3341<br>Address: One Audubon Road,Wakefield,MA,01880<br>RVP: Gmoser"),
+
+foxwoods  = L.marker([ 41.474530, -71.960959] ).bindPopup( "<b> Foxwoods </b> <br>Director: Aldo LoDuca,<br> Location: 1716<br> Phone: 860-312-8754<br>Cell: 860-287-9759<br>Address: 350 Trolley Line Blvd,Mashantucket,CT,06338<br>RVP: Gmoser"),
+
+gurneysNewport  = L.marker([ 41.492047, -71.327770] ).bindPopup( "<b> Gurney's Newport </b> <br>Director: Bryan Pringles,<br> Location: 3407<br> Phone: 401-851-3310<br>Cell: 401-556-8046<br>Address: 1 Goat Island,Newport,RI,02840<br>RVP: Gmoser"),
+
+hartfordWindsorMarriott  = L.marker([ 41.874134, -72.668249 ] ).bindPopup( "<b> Hartford Windsor Marriott </b> <br>Director: Chris Orlando,<br> Location: 2071<br> Phone: 860-847-5091<br>Cell: 860-861-8202<br>Address: 28 Day Hill Road,Windsor,CT,06095<br>RVP: Gmoser"),
+
+hiltonBurlington  = L.marker([ 44.478401, -73.218286] ).bindPopup( "<b> Hilton Burlington </b> <br>Director: Tom Wojcik,<br> Location: 2057<br> Phone: 802-658-6500<br>Cell: 802-734-6360<br>Address: 60 Battery Street,Burlington,VT,05401<br>RVP: Gmoser"),
+
+hiltonBostonDedham  = L.marker([42.226061, -71.170080 ] ).bindPopup( "<b> Hilton Boston Dedham </b> <br>Director: Chris Copson,<br> Location: 3403<br> Phone: 781-407-1634<br>Cell: 508-989-6648<br>Address: 25 Allied Drive,Dedham,MA,02026<br>RVP: Gmoser"),
+
+hiltonBostonWoburn  = L.marker([ 42.496752, -71.121704 ] ).bindPopup( "<b> Hilton Boston Woburn </b> <br>Director: Dylan Christopher,<br> Location: 2192<br> Phone: 617-232-1487<br>Cell: 781-439-4158<br>Address: 2 Forbes Road,Woburn,MA,01801<br>RVP: Gmoser"),
+
+hiltonGardenInn  = L.marker([ 42.091400, -71.268649 ] ).bindPopup( "<b> Hilton Garden Inn </b> <br>Director: Steve Legrow,<br> Location: 4192<br> Phone: 508-543-2040<br>Cell: 508-641-2211<br>Address: 27 Patriot Place,Foxborough,MA,02035<br>RVP: Gmoser"),
+
+hiltonHartford  = L.marker([ 41.769362, -72.676284 ] ).bindPopup( "<b> Hilton Hartford </b> <br>Director: Mike Hromadka,<br> Location: 1587<br> Phone: 860-240-7379<br>Cell: 860-227-0955<br>Address: 315 Trumbull Street,Hartford,CT,06103<br>RVP: Gmoser"),
+
+hiltonLongIsland  = L.marker([ 40.763906, -73.425691 ] ).bindPopup( "<b> Hilton Long Island </b> <br>Director: Gian DiMauro,<br> Location: 3564<br> Phone: 631-752-0975<br>Cell: 631-838-9178<br>Address: 598 Broadhollow Road,Melville,NY,11747<br>RVP: Gmoser"),
+
+hiltonStamford  = L.marker([ 41.043478, -73.550578] ).bindPopup( "<b> Hilton Stamford </b> <br>Director: Anthony Panissidi,<br> Location: 3566<br> Phone: 203-351-1928<br>Cell: 917-574-7603<br>Address: 1 1st Stamford Place,Stamford,CT,06902<br>RVP: Gmoser"),
+
+hiltonWestchester  = L.marker([ 41.010156, -73.688259 ] ).bindPopup( "<b> Hilton Westchester </b> <br>Director: Bill Peden,<br> Location: 1320<br> Phone: 914-908-6077<br>Cell: 203.885.4718<br>Address: 699 Westchester Avenue,Rye Brook,NY,10573<br>RVP: Gmoser"),
+
+hotelViking  = L.marker([ 41.487725, -71.309791 ] ).bindPopup( "<b> The Hotel Viking </b> <br>Director: Chuck Spaulding,<br> Location: 3578<br> Phone: 401-848-4876<br>Cell: 401-230-8353<br>Address: 1 Bellevue Ave,Newport,RI,02840<br>RVP: Gmoser"),
+
+marriottBurlington  = L.marker([ 42.489864, -71.195380 ] ).bindPopup( "<b> Marriott Burlington </b> <br>Director: Beth Glennon,<br> Location: 2175<br> Phone: 781-221-6648<br>Cell: 603-714-8049<br>Address: One Burlington Mall Road,Burlington,MA,01803<br>RVP: Gmoser"),
+
+marriottHartfordDowntown  = L.marker([ 41.764192, -72.669293 ] ).bindPopup( "<b> Marriott Hartford Downtown </b> <br>Director: Chris Piazzo,<br> Location: 1588<br> Phone: 860-760-2388<br>Cell: 508-344-8714<br>Address: 200 Columbus Blvd,Hartford,CT,06103<br>RVP: Gmoser"),
+
+marriottMysticHotelSpa  = L.marker([ 41.365242, -72.025137 ] ).bindPopup( "<b> Marriott Mystic Hotel & Spa </b> <br>Director: Tony Ellis,<br> Location: 1593<br> Phone: 860-326-0378<br>Cell: 401-688-0835<br>Address: 625 North Road,Groton,CT,06340<br>RVP: Gmoser"),
+
+marriottNewton  = L.marker([ 42.346680, -71.258724 ] ).bindPopup( "<b> Marriott Newton </b> <br>Director: Joe Field,<br> Location: 3405<br> Phone: 617-559-2228<br>Cell: 978-317-0130<br>Address: 2345 Commonwealth Ave,Newton,MA,02466<br>RVP: Gmoser"),
+
+marriottProvidence  = L.marker([ 41.835477, -71.413040 ] ).bindPopup( "<b> Marriott Providence </b> <br>Director: Scott Hodgson,<br> Location: 2149<br> Phone: 401-272-2400 x 7803<br>Cell: 401-368-2424<br>Address: 1 Orms Street,Providence,RI,02904<br>RVP: Gmoser"),
+
+melvilleMarriott  = L.marker([ 40.783185, -73.421939 ] ).bindPopup( "<b> Melville Marriott </b> <br>Director: Joseph Stublick,<br> Location: 2069<br> Phone: 631-351-8114<br>Cell: 631-877-5431<br>Address: 1350 Walt Whitman Rd,Melville,NY,11747<br>RVP: Gmoser"),
+
+moheganSun  = L.marker([ 41.491696, -72.091550 ] ).bindPopup( "<b> Mohegan Sun </b> <br>Director: Jim Sullivan,<br> Location: 1494<br> Phone: 860-862-3704<br>Cell: 860-908-5451<br>Address: 1 Mohegan Sun Blvd,Uncasville,CT,06384<br>RVP: Gmoser"),
+
+renaissancePatriotPlace  = L.marker([ 42.090652, -71.268978 ] ).bindPopup( "<b> Renaissance Patriot Place </b> <br>Director: Steve Legrow,<br> Location: 2046<br> Phone: 508-543-5500<br>Cell: 508-641-2211<br>Address: 28 Patriot Place,Foxborough,MA,02035<br>RVP: Gmoser"),
+
+renaissanceProvidenceHotel  = L.marker([ 41.830105, -71.416701 ] ).bindPopup( "<b> Renaissance Providence Hotel </b> <br>Director: Brendan O\'Donnell,<br> Location: 3571<br> Phone: 401-919-5035<br>Cell: 401-338-1461<br>Address: 5 Avenue of the Arts,Providence,RI,02903<br>RVP: Gmoser"),
+
+renaissanceWestchesterHotel  = L.marker([41.017420, -73.717881] ).bindPopup( "<b> Renaissance Westchester Hotel </b> <br>Director: Obie Mateo,<br> Location: 1634<br> Phone: 914-750-4043<br>Cell: 718-791-7257<br>Address: 80 West Red Oak Lane,West Harrison,NY,10604<br>RVP: Gmoser"),
+
+ritzCarltonWestchester  = L.marker([ 41.033179, -73.767655 ] ).bindPopup( "<b> Ritz Carlton Westchester </b> <br>Director: Todd Gravelle,<br> Location: 2221<br> Phone: 914-467-5768<br>Cell: 305-776-8411<br>Address: 3 Renaissance Square,White Plains,NY,10601<br>RVP: Gmoser"),
+
+sheratonNeedham  = L.marker([ 42.303389, -71.219437 ] ).bindPopup( "<b> Sheraton Needham </b> <br>Director: Andrew O\'Neil-Smith,<br> Location: 1371<br> Phone: 339-225-3280<br>Cell: 774-266-4371<br>Address: 100 Cabot Street,Needham,MA,02494<br>RVP: Gmoser"),
+
+sheratonStamford  = L.marker([ 41.054745, -73.532555 ] ).bindPopup( "<b> Sheraton Stamford </b> <br>Director: Craig Meyerson,<br> Location: 1143<br> Phone: 203-989-0148<br>Cell: 914-582-6195<br>Address: 700 East Main Street,Stamford,CT,06901<br>RVP: Gmoser"),
+
+tarrytownHouseEstate  = L.marker([ 41.051123, -73.856761 ] ).bindPopup( "<b> Tarrytown House Estate </b> <br>Director: Alex Bartel,<br> Location: 3577<br> Phone: 914-591-3196<br>Cell: 914-589-2286<br>Address: 49 E Sunnyside Lane,Tarrytown,NY,10591<br>RVP: Gmoser"),
+
+westinPortlandHarborview  = L.marker([ 43.654918, -70.264121 ] ).bindPopup( "<b> Westin Portland Harborview </b> <br>Director: Zander Stearns,<br> Location: 1299<br> Phone: 207-517-8902<br>Cell: 207-423-7294<br>Address: 157 High Street,Portland,ME,04101<br>RVP: Gmoser"),
+
+	westinWaltham  = L.marker([ 42.395136, -71.259938 ] ).bindPopup( "<b> Westin Waltham </b> <br>Director: Brian Berg,<br> Location: 4638<br> Phone: 781-684-8660<br>Cell: 603-660-6224<br>Address: 70 Third Street,Waltham,MA,02451<br>RVP: Gmoser");
+
+
+var hotels = L.layerGroup(
+			[acHotelWorcester,
+			albanyMarriott,
+			doubletreebyHiltonBurlington,
+			doubletreeWestborough,
+			fourPointsbySheratonWakefield,
+			foxwoods,
+			gurneysNewport,
+			hartfordWindsorMarriott,
+			hiltonBurlington,
+			hiltonBostonDedham,
+			hiltonBostonWoburn,
+			hiltonGardenInn,
+			hiltonHartford,
+			hiltonLongIsland,
+			hiltonStamford,
+			hiltonWestchester,
+			hotelViking,
+			marriottBurlington,
+			marriottHartfordDowntown,
+			marriottMysticHotelSpa,
+			marriottNewton,
+			marriottProvidence,
+			melvilleMarriott,
+			moheganSun,
+			renaissancePatriotPlace,
+			renaissanceProvidenceHotel,
+			renaissanceWestchesterHotel,
+			ritzCarltonWestchester,
+			sheratonNeedham,
+			sheratonStamford,
+			tarrytownHouseEstate,
+			westinPortlandHarborview,
+			westinWaltham]
+	    	);
+
+	    var mymap = L.map('mapid', {
+	    center: [42.648565, -73.755346],
+	    zoom: 6,
+	    layers: [hotels]
+		});
+
+
+	
+
+
+
+	const attribution =
+	'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors';
+	const tileUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
+	const tiles = L.tileLayer(tileUrl, { attribution});
+	tiles.addTo(mymap);
+
+
+</script>
+
+</body>
+</html>
+
+																
