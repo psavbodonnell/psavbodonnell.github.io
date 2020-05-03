@@ -104,7 +104,25 @@ tarrytownHouseEstate  = L.marker([ 41.051123, -73.856761 ] ).bindPopup( "<b> Tar
 
 westinPortlandHarborview  = L.marker([ 43.654918, -70.264121 ] ).bindPopup( "<b> Westin Portland Harborview </b> <br>Director: Zander Stearns,<br> Location: 1299<br> Phone: 207-517-8902<br>Cell: 207-423-7294<br>Address: 157 High Street,Portland,ME,04101<br>RVP: Gmoser"),
 
-	westinWaltham  = L.marker([ 42.395136, -71.259938 ] ).bindPopup( "<b> Westin Waltham </b> <br>Director: Brian Berg,<br> Location: 4638<br> Phone: 781-684-8660<br>Cell: 603-660-6224<br>Address: 70 Third Street,Waltham,MA,02451<br>RVP: Gmoser");
+westinWaltham  = L.marker([ 42.395136, -71.259938 ] ).bindPopup( "<b> Westin Waltham </b> <br>Director: Brian Berg,<br> Location: 4638<br> Phone: 781-684-8660<br>Cell: 603-660-6224<br>Address: 70 Third Street,Waltham,MA,02451<br>RVP: Gmoser"),
+
+//Omni properties
+
+hyattRegencyGreenwich  = L.marker([ 41.047003,  -73.567555 ] ).bindPopup( "<b> Hyatt Regency Greenwich</b> <br>Director: Steve Ciferri <br> Location: OMNI <br> Phone: 203-409-4595<br>Cell: 203-302-8763<br>Address:Old Greenwich Lane,	Greenwich, CT	06878<br>RVP: Gmoser"),
+
+
+omniNewHaven  = L.marker([ 41.305652,  -72.926981 ] ).bindPopup( "<b> Omni New Haven </b> <br>Director: Greg Hanna <br> Location: OMNI <br> Phone: TBD <br>Cell: 203-868-8692<br>Address: 155 Temple Street,	New Haven,	CT,	06510<br>RVP: Gmoser"),
+
+mgmSpringfield  = L.marker([ 42.098831,-72.587754 ] ).bindPopup( "<b> MGM Springfield </b> <br>Director: Joshua Valerio <br> Location: OMNI<br> Phone: 413-273-5667<br>Cell: 224-306-4294<br>Address: One MGM Way	Springfield, MA, 01103<br>RVP: Gmoser"),
+
+ omniProvidence  = L.marker([41.825101, -71.415791 ] ).bindPopup( "<b> Omni Providence </b> <br>Director: Victor	Arruda,<br> Location: OMNI <br> Phone: TBD <br>Cell: 774-270-3259<br>Address:1 West Exchange Street	Providence,	RI,	02903<br>RVP: Gmoser"),
+
+ommniMountWashington  = L.marker([ 44.257221, -71.439889 ] ).bindPopup( "<b> Ommni Mount Washington </b> <br>Director: Todd McClenathan<br> Location: OMNI<br> Phone: TBD<br>Cell: 603-616-4661<br>Address: 310 Mount Washington Hotel Road,	Brenton Woods,	NH,	03578<br>RVP: Gmoser")
+
+
+	;
+
+
 
 
 var hotels = L.layerGroup(
@@ -140,7 +158,14 @@ var hotels = L.layerGroup(
 			sheratonStamford,
 			tarrytownHouseEstate,
 			westinPortlandHarborview,
-			westinWaltham]
+			westinWaltham,
+            //Omni Properties
+            hyattRegencyGreenwich,
+			omniNewHaven,
+			mgmSpringfield,
+			omniProvidence,
+			ommniMountWashington
+			]
 	    	);
 
 	    var mymap = L.map('mapid', {
